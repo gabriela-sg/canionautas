@@ -1,0 +1,362 @@
+:root {
+  --cor-0: #ffffff;
+  --cor-1: #f7f7f7;
+  --cor-2: #ededed;
+  --cor-3: #dedede;
+  --cor-4: #cccccc;
+  --cor-5: #b2b2b2;
+  --cor-6: #9c9c9c;
+  --cor-7: #717171;
+  --cor-8: #595959;
+  --cor-9: #404040;
+  --cor-10: #2e2e2e;
+  --cor-11: #111111;
+  --cor-12: #000000;
+  --cor-p1: #BDD4F2;
+  --cor-p2: #889ABF;
+  --cor-p3: #364259;
+  --cor-p4: #10260D;
+  --cor-p5: #010D00;
+  --font-0-m-b: 600 1.125rem/1.35 "Caveat", sans-serif;
+  --font-0-l: 400 3rem/1.2 "Caveat", sans-serif;
+  --font-0-xl: 600 4rem/1.25 "Caveat", sans-serif;
+
+  --font-1-xs: 400 0.75rem/1.35 "Poppins", sans-serif;
+  --font-1-s: 400 1rem/1.5 "Poppins", sans-serif;
+  --font-1-m: 400 1.125rem/1.35 "Poppins", sans-serif;
+  --font-1-m-b: 600 1.125rem/1.35 "Poppins", sans-serif;
+  --font-1-l: 400 1.5rem/1.5 "Poppins", sans-serif;
+  --font-1-xl: 600 2rem/1.25 "Poppins", sans-serif;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  font: var(--font-1-s);
+}
+ul li{
+  list-style: none;
+}
+a{
+  color: inherit;
+}
+
+a:hover{
+  color: var(--cor-p2);
+}
+
+img{
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.cabecalho{
+  background-color: var(--cor-p5);
+  color: var(--cor-1);
+  display: flex;
+  gap: 20px;
+}
+.logo{
+  animation: mover 3s linear;
+}
+.logo img{
+ max-width: 200px;
+}
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+  padding: 15px;
+  background-color: var(--cor-p2);
+  color: var(--cor-1);
+}
+.close{
+  color: var(--cor-1);
+  font: var(--font-1-l);
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  background-color: var(--cor-p5);
+  transition: 0.4s;
+}
+
+.menu{
+  display: none;
+  background-color: var(--cor-10);
+  padding: 15px;
+  flex-direction: column;
+  width: 100%;
+}
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+  font: var(--font-1-l);
+}
+
+.menu li {
+  margin: 15px 0;
+  border-bottom: 2px solid var(--cor-9);
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--cor-1);
+  font-weight: bold;
+  transition: 0.3s;
+}
+.menu a:hover {
+  color: var(--cor-p1);
+}
+
+
+#close {
+  cursor: pointer;
+  display: none;
+  color: var(--cor-1);
+}
+
+.cabecalho{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.section{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,h2{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 20px;
+}
+h1::after,h2::after{
+  content: " ";
+  display: flex;
+  width: 80%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--cor-p5);
+}
+
+.section h2{
+  font: var(--font-0-l);
+  text-align: center;
+  padding-bottom: 20px;
+}
+.section ul li{
+  padding-bottom: 10px;
+  max-width: 90ch;
+}
+.section p{
+  font: var(--font-1-m);
+}
+.background-color{
+  background-color: var(--cor-p2);
+}
+.section-title{
+  max-width: 800px;
+}
+.title-sub {
+  text-align: center;
+}
+.section-title p{
+  padding-top: 20px;
+}
+.title-sub h1{
+  font: var(--font-0-xl);
+}
+
+.title-sub span{
+  font-style: italic;
+}
+
+.sobre-img1{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 450px;
+  flex-basis: calc(50%-10px);
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--cor-p2);
+}
+.sobre-img1 div{
+  width: 100%;
+  flex-basis: calc(50% - 10px);
+}
+.transicao-img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.transicao-img:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+
+.section-inscricao ul li{
+background-color: var(--cor-p2);
+border-radius: 5px;
+padding: 20px;
+margin-bottom: 10px;
+color: var(--cor-12);
+}
+.section-inscricao p{
+  padding-bottom: 20px;
+}
+
+
+.formulario{
+ max-width: 600px;
+ width: 100%;
+ margin: 0 10px;
+ padding: 20px;
+ background-color: var(--cor-p2);
+ border-radius: 5px;
+}
+
+.formulario label{
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+
+.formulario input, .formulario textarea, .formulario select{
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--cor-p3);
+   border-radius: 4px;
+   font: var(--font-1-s);
+}
+.formulario input:focus, .formulario textarea:focus, .formulario select:focus{
+  border-color: var(--cor-p5); 
+  outline: none; 
+}
+
+
+.formulario button{
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color:var(--cor-p4) ;
+  color: var(--cor-3);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font: var(--font-1-m-b);
+}
+.formulario button:hover{
+  background-color:var(--cor-p5) ;
+}
+.contato ul{
+  margin-top: 20px;
+}
+.contato ul li{
+  display: flex;
+  gap: 8px;
+}
+.contato-itens li{
+  display: flex;
+  align-items: center;
+}
+.contato-itens a:hover{
+  font: var(--font-1-m-b);
+  color: var(--cor-p5);
+}
+.contato-itens img{
+  max-width: 30px;
+}
+
+footer{
+  padding: 20px 100px;
+  font: var(--font-1-xs);
+  background-color: var(--cor-p5);
+  color: var(--cor-1);
+}
+
+@media(min-width:1000px){
+  :root {
+  --font-0-xl: 600 5rem/1.25 "Caveat", sans-serif;
+  }
+  .logo{
+    padding-left: 40px;
+  }
+  .logo img{
+    max-width: 400px;
+   }
+  .menu-toggle, .close{
+    display: none;
+  }
+  .menu {
+    display: flex;
+    background-color:var(--cor-p5);
+    font: var(--font-1-m-b);
+  }
+  .menu ul{
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    margin-right: 20px;
+  }
+  .menu ul li{
+    border: none;
+  }
+  .section-title, .sobre-texto{
+    max-width: 500px;
+  }
+.sobre-img2 img{
+  max-width: 900px;
+  width: 100%;
+}
+.inscricao-form p{
+  max-width: 90ch;
+}
+
+.formulario{
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+
+@keyframes mover {
+  0% {
+    transform: translate(-50px, -50px);
+  }
+  50% {
+    transform: translate(-25px, -25px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
